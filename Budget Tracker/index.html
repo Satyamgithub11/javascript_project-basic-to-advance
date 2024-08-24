@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Buddy</h1>
+
+        <div class="budget-display">
+            <div class="income">
+                <h2>Income</h2>
+                <p id="income-amount">$0.00</p>
+            </div>
+            <div class="expense">
+                <h2>Expenses</h2>
+                <p id="expense-amount">$0.00</p>
+            </div>
+            <div class="balance">
+                <h2>Balance</h2>
+                <p id="balance-amount">$0.00</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h3>Add New Transaction</h3>
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Enter description" required>
+                <input type="number" id="amount" placeholder="Enter amount" required>
+                <select id="type" required>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+
+        <h3>Transaction History</h3>
+        <ul id="transaction-list">
+            <!-- Transaction items will be dynamically added here -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
