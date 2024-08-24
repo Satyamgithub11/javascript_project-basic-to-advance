@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.slider {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide, .slide-first {
+    width: 20%;
+    transition: 0.6s ease;
+}
+
+.slide img, .slide-first img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+
+#radio1:checked ~ .slides .slide-first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .slides .slide-first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .slides .slide-first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .slides .slide-first {
+    margin-left: -60%;
+}
+
+#radio5:checked ~ .slides .slide-first {
+    margin-left: -80%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -30px;
+}
+
+.navigation-auto div {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: border-color 0.4s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+.auto-btn1 {
+    animation: auto 25s infinite;
+}
+
+.auto-btn2 {
+    animation: auto2 25s infinite;
+}
+
+.auto-btn3 {
+    animation: auto3 25s infinite;
+}
+
+.auto-btn4 {
+    animation: auto4 25s infinite;
+}
+
+.auto-btn5 {
+    animation: auto5 25s infinite;
+}
+
+@keyframes auto {
+    0%, 20% {
+        border-color: #fff;
+    }
+    25%, 100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes auto2 {
+    0%, 20% {
+        border-color: transparent;
+    }
+    25%, 45% {
+        border-color: #fff;
+    }
+    50%, 100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes auto3 {
+    0%, 45% {
+        border-color: transparent;
+    }
+    50%, 70% {
+        border-color: #fff;
+    }
+    75%, 100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes auto4 {
+    0%, 70% {
+        border-color: transparent;
+    }
+    75%, 95% {
+        border-color: #fff;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes auto5 {
+    0%, 95% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #fff;
+    }
+}

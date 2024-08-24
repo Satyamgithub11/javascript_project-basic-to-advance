@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Slider</title>
+</head>
+<body>
+
+    <div class="slider">
+        <div class="slides">
+            <!---Radio button for manual naviagtion-->
+            <input type="radio" name="radio-btn" id="radio1" checked>
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+
+            <!---image slider-->
+            <div class="slide-first">
+                <img src="images/image1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="images/image2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="images/image3.jpg" alt="Image 3">
+            </div>
+            <div class="slide">
+                <img src="images/image4.jpg" alt="Image 4">
+            </div>
+            <div class="slide">
+                <img src="images/image5.jpg" alt="Image 5">
+            </div>
+
+            <!----Automatic navigation-->
+            <div class="navigation-auto">
+                <div class="auto-btn"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+            </div>
+
+            <!---manual navigation-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
